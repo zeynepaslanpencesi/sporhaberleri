@@ -1,0 +1,2 @@
+module FenerbahcehaberHelper
+end

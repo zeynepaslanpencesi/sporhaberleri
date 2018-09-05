@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p><h3 style="color: Red">Haberler</h3></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Haber Başlığı</th>
+      <th>Haber İçeriği</th>
+      <th>Haber Görseli</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @habers.each do |haber| %>
+      <tr>
+        <td><%= haber.title %></td>
+        <td><%= haber.msg %></td>
+        <td> <%= image_tag haber.resim.url(:thumb) if haber.resim? %> </td>
+        <td><%= link_to 'Haberi GÖster', haber %></td>
+        <td><%= link_to 'Haberi Düzenle', edit_haber_path(haber) %></td>
+        <td><%= link_to 'Haberi Sil', haber, method: :delete, data: { confirm: 'Haberi silmek istiyor musunuz?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+
+<%= link_to 'Yeni Haber', new_haber_path %>

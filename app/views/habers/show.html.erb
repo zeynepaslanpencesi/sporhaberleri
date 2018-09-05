@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+<%= image_tag @haber.resim.url(:medium) if @haber.resim? %> 
+
+<p>
+  <strong>Haber Başlığı:</strong>
+  <%= @haber.title %>
+</p>
+
+<p>
+  <strong>Haber İçeriği:</strong>
+  <%= @haber.msg %>
+</p>
+
+
+<%= link_to 'Düzenle', edit_haber_path(@haber) %> |
+<%= link_to 'Geri', habers_path %>

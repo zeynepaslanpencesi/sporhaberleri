@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <%= csrf_meta_tags %>
+<style>
+	body{
+		 background-color: #DCDCDC;
+		}
+</style>
+  </head>
+
+<body>
+ 
+
+<br/>
+<p style="color: red;"><font size="5">FENERBAHÇE HABERLERİ</font> </p>
+<br/>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+<div class="card" style="width: 18rem;">
+  <%= image_tag("resim/fenerhaber1", width: '287px', height: '200px') %>
+  <div class="card-body">
+    <p class="card-text"><%= link_to 'Fenerbahçe soyunma odasında toplantı yapıldı', home_fhaber1_path%></p>
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card" style="width: 18rem;">
+  <%= image_tag("resim/fenerhaber2", width: '287px', height: '200px') %>
+  <div class="card-body">
+    <p class="card-text"><%= link_to 'Fenerbahçe, tarihinin en kötü başlangıcını yaptı!', home_fhaber2_path%></p>
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card" style="width: 18rem;">
+  <%= image_tag("resim/fenerhaber3", width: '287px', height: '200px') %>
+  <div class="card-body">
+    <p class="card-text"><%= link_to 'Serdar Ali Çelikler: Satır aralarını okuyun!', home_fhaber3_path%></p>
+  </div>
+</div>
+
+</div>
+</div>
+<br/>
+<div class="row">
+	<div class="col-md-4">
+		<div class="card" style="width: 18rem;">
+  <%= image_tag("resim/fenerhaber5", width: '287px', height: '200px') %>
+  <div class="card-body">
+    <p class="card-text"><%= link_to 'Rıdvan Dilmen Fenerbahçenin transfer dönemini yorumladı: Mali başarıdır!', home_fhaber4_path%></p>
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+		<div class="card" style="width: 18rem;">
+  <%= image_tag("resim/fener11", width: '287px', height: '200px') %>
+  <div class="card-body">
+    <p class="card-text"><%= link_to 'Ayew ilk golünü attı', home_fhaber5_path%></p>
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+		<div class="card" style="width: 18rem;">
+  <%= image_tag("resim/fenerhaber7", width: '287px', height: '200px') %>
+  <div class="card-body">
+    <p class="card-text"><%= link_to 'Fenerbahçenin şampiyonluk yarışına girmesinin zor olduğunu ifade eden Rıdvan Dilmen, "Fenerbahçe toparlar, bu kadro çok kötü bir kadro değil." dedi.', home_fhaber6_path%></p>
+  </div>
+</div>
+</div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+  <%= image_tag("resim/fenerhaber8", width: '287px', height: '200px') %>
+  <div class="card-body">
+    <p class="card-text"><%= link_to '"Facia bir antrenörlük performansı!"', home_fhaber7_path%></p>
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+  <%= image_tag("resim/fenerhaber9", width: '287px', height: '200px') %>
+  <div class="card-body">
+    <p class="card-text"><%= link_to 'Rıdvan Dilmen: Bugün Ali Koç başkan olmasaydı...', home_fhaber8_path%></p>
+  </div>
+</div>
+</div>
+<div class="col-md-4">
+    <div class="card" style="width: 18rem;">
+  <%= image_tag("resim/fenerbahce10", width: '287px', height: '200px') %>
+  <div class="card-body">
+    <p class="card-text"><%= link_to 'Cocuya büyük tepki', home_fhaber9_path%></p>
+  </div>
+</div>
+</div>	
+</body>
+</html>

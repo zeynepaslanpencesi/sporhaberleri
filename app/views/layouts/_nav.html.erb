@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>    
+    <%= csrf_meta_tags %>
+
+    
+ </head>
+
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark " style="background-color: black; color: white">
+  <a class="navbar-brand"><font size="5" face="arial">Spor Haberleri</font></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+   <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">    
+       
+        <div class="col"><font size="4">      
+        <%=link_to 'Anasayfa', home_index_path, class: 'navbar-link' %>
+        </font></div>
+        <div class="col"><font size="4">      
+        <%=link_to 'Beşiktaş', home_besiktas_path, class: 'navbar-link' %>
+        </font></div>
+        <div class="col"><font size="4">      
+        <%=link_to 'Galatasaray', home_galatasaray_path, class: 'navbar-link' %>
+        </font></div>
+        <div class="col"><font size="4">      
+        <%=link_to 'Fenerbahçe', home_fenerbahce_path, class: 'navbar-link' %>
+        </font></div>
+      
+      <div class="col"><font size="4">
+        <%=link_to 'Hakkımızda', home_about_path, class: 'navbar-link' %>
+      </font></div>
+
+      <div class="col"><font size="4">
+        <%=link_to 'Haber Yaz', habers_new_path, class: 'navbar-link' %>
+      </font></div>
+
+
+     
+      <ul class="nav navbar-nav navbar-right"> <font size="3">
+        <form class="form-inline">
+        <% if user_signed_in? %>
+        Logged in as <strong><%= current_user.email %></strong>.
+       <li> <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
+        <% else %>
+          <li><%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+          <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %></li>
+        <% end %>
+        </form></font>
+      </ul>
+</nav>
+<footer class="  fixed-bottom" style="background-color: black">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Spor Haberleri 2018</p>
+      </div>
+      <!-- /.container -->
+</footer>
+</body>
+</html>

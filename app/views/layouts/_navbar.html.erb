@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <%= csrf_meta_tags %>
+<style >
+  body {
+  position: relative;
+}
+</style>
+  </head>
+<script >
+  $('body').scrollspy({ target: '#navbar-example' })
+</script>
+<body>
+  <nav class="navbar navbar-light bg-dark navbar-fixed-top" style="color: white;">
+  <a class="navbar-brand">Haber Sitesi</a>  
+      <%=link_to 'Anasayfa', home_index_path, class: 'navbar-link' %>
+      <%= link_to 'Spor', home_sport_path, class: 'navbar-link' %>
+      <%= link_to 'İletişim', home_communication_path, class: 'navbar-link' %> 
+      <%= link_to 'Hakkımızda', home_about_path, class: 'navbar-link' %>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+  <form class="form-inline">
+    <% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+</form>
+</nav>
+
+<footer class=" bg-dark fixed-bottom">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Haber Sitesi 2018</p>
+      </div>
+      <!-- /.container -->
+</footer>
+
+
+</body>

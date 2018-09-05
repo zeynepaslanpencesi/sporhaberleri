@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Haber Başlığı:</strong>
+  <%= @post.title %>
+</p>
+
+<p>
+  <strong>Haber İçeriği:</strong>
+  <%= @post.msg %>
+</p>
+
+<%= link_to 'Haberi Düzenle', edit_post_path(@post) %> |
+<%= link_to 'Geri', posts_path %>

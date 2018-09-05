@@ -1,0 +1,33 @@
+<%= form_with(model: haber, local: true) do |form| %>
+  <% if haber.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(haber.errors.count, "error") %> prohibited this haber from being saved:</h2>
+
+      <ul>
+      <% haber.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %><br/>
+    <%= form.text_field :title, id: :haber_title   %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resim %><br/>
+    <%= form.file_field :resim %>
+  </div>
+
+  <div class="field">
+    <%= form.label :msg %><br/>
+    <%= form.text_area :msg, id: :haber_msg %>
+  </div>
+
+  <div class="actions">
+   
+    <%= form.submit  "Haberi Kaydet",  class: "btn btn-primary"%>
+  </div>
+<% end %>
